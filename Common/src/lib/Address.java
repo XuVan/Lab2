@@ -9,26 +9,29 @@ package lib;
  */
 
 public class Address {
-    private String civicNumber;
-    private String streetName;
-    	
-    public Address() { }
+	private String city = "";
+	private String civicNumber = "";
+	private String province = "";
+	private String code = "";
+	private String streetName = "";
 
-    public Address (String civicNumber, String streetName)    {
-    	this.civicNumber = civicNumber;
-    	this.streetName = streetName;
-    }
-    
-    public String getAddress()  {
-    	return civicNumber + " " + streetName;
-    }
+	public Address() {
+	}
 
-    public String getCivicNumber()  {
-    	return civicNumber;
-    }
-    
-    public String getStreetName()    {
-    	return streetName;
-    }
+	public Address(String civicNumber, String streetName) {
+		this.civicNumber = civicNumber;
+		this.streetName = streetName;
+	}
+
+	/**
+	 * Returns a String representation of the address.
+	 * 
+	 * @return address a formatted address.
+	 */
+	public String getAddress() {
+		String address = civicNumber + " " + streetName;
+
+		return address;
+	}
+
 }
-
